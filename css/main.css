@@ -66,13 +66,6 @@ code {
   font-family: 'Source Code Pro', 'Courier New', monospace;
 }
 
-figure {
-  background-color: #f6f6f6;
-  border-radius: 3px;
-  margin: 0;
-  padding: 5px 10px;
-}
-
 h1 {
   color: white;
   font-size: 20px;
@@ -95,6 +88,10 @@ header {
 }
 
 pre {
+  background-color: #f6f6f6;
+  border-radius: 3px;
   font-family: 'Source Code Pro','Courier New', monospace;
+  margin: 0;
+  padding: 5px 10px;
   white-space: pre-wrap;
 }

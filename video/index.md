@@ -55,9 +55,9 @@ Duration: 2:00
 If you're familiar with git, you can download the code for this codelab
 from GitHub by cloning it:
 
-{% highlight bash %}
+``` bash
 git clone https://github.com/googlecodelabs/adaptive-web-media
-{% endhighlight %}
+```
 
 Alternatively, click the following button to download a .zip file of the
 code:
@@ -145,11 +145,11 @@ Let's get started!
 
 Add a video element to **index.html** in your work folder:
 
-{% highlight html %}
+``` html
 <video autoplay controls src="video/bunny.webm">
   <p>Sorry! Your browser doesn't support the video element.</p>
 </video>
-{% endhighlight %}
+```
 
 Notice that the video element always has a closing `</video>` tag:
 it's not 'self-closing'. Any elements inside it (such as the paragraph
@@ -165,11 +165,11 @@ This enables multiple views on the same video.
 
 Try it out:
 
-{% highlight html %}
+``` html
 <video autoplay controls src="video/bunny.webm#t=25,26">
   <p>Sorry! Your browser doesn't support the video element.</p>
 </video>
-{% endhighlight %}
+```
 
 ### Video formats
 
@@ -192,25 +192,25 @@ Use the `source` element to enable browsers to choose from multiple
 formats. MP4 and WebM cover all modern browsers, including all mobile
 browsers. Specify video sources in order of preference:
 
-{% highlight html %}
+``` html
 <video autoplay controls>
   <source src="video/bunny.webm" />
   <source src="video/bunny.mp4" />
   <p>Sorry! Your browser doesn't support the video element.</p>
 </video>
-{% endhighlight %}
+```
 
 Adding a `type` attribute to a `source` element enables the browser to
 select a video source without having to download part of the video to
 check:
 
-{% highlight html %}
+``` html
 <video autoplay controls>
   <source src="video/bunny.webm" type="video/webm" />
   <source src="video/bunny.mp4" type="video/mp4" />
   <p>Sorry! Your browser doesn't support the video element.</p>
 </video>
-{% endhighlight %}
+```
 
 **Try it out!**
 
@@ -239,12 +239,12 @@ Try the video `canPlayType()` method.
 Add the following code to the **main.js** file in the **js**directory in
 your **work**directory:
 
-{% highlight javascript %}
+``` javascript
 var videoElement = document.querySelector('video');
 console.log('fubar', videoElement.canPlayType('fubar'));
 console.log('webm', videoElement.canPlayType('video/webm'));
 console.log('webm/vp8', videoElement.canPlayType('video/webm; codecs="vp8"'));
-{% endhighlight %}
+```
 
 Take a look at the output from the DevTools console.
 
@@ -259,9 +259,9 @@ supported.
 Want to know which source was actually chosen? Add this to your
 JavaScript:
 
-{% highlight javascript %}
+``` javascript
 console.log(videoElement.currentSrc);
-{% endhighlight %}
+```
 
 ### Video size and display size
 
@@ -271,12 +271,12 @@ video. That might be different from the dimensions of the video element
 their actual size. For this, you need to wait until the video metadata
 is loaded:
 
-{% highlight javascript %}
+``` javascript
 videoElement.onloadedmetadata = function() {
   console.log(this.videoWidth);
   console.log(this.videoHeight);
 };
-{% endhighlight %}
+```
 
 Thinking about display size and CSS, a simple technique for video is to
 specify a `width` and a `max-width`. That way you get a preferred size,
@@ -287,12 +287,12 @@ it manually!
 
 Add the following to **main.css** in the **work/css** folder:
 
-{% highlight css %}
+``` css
 video {
   width: 640px;
   max-width: 100%;
 }
-{% endhighlight %}
+```
 
 ### The poster attribute
 
@@ -303,9 +303,9 @@ There's already a poster image in the **work/images** folder:
 **poster.jpg**. Add a `poster` attribute to the opening tag of the
 video element:
 
-{% highlight html %}
+``` html
 <video autoplay controls poster="images/poster.jpg">
-{% endhighlight %}
+```
 
 Including a poster attribute gives viewers a meaningful idea of content
 without needing to download video or start playback. The only downside
@@ -349,7 +349,7 @@ plain text file.
 Create a directory named **track** in your **work**folder and add a new
 file named **track.vtt**. Add the following text to that file:
 
-{% highlight html %}
+``` html
 WEBVTT FILE
 
 00:00:00.000 --> 00:00:02.000
@@ -366,26 +366,26 @@ Three rodents, one throws an acorn at the rabbit
 
 00:00:15.500 --> 00:00:16.750
 The rabbit looks shocked
-{% endhighlight %}
+```
 
 This format is called WebVTT.
 
 Add the following `track` element as a child of your video element:
 
-{% highlight html %}
+``` html
 <track label="Descriptions" src="tracks/track.vtt" />
-{% endhighlight %}
+```
 
 Your video element code should now look like this:
 
-{% highlight html %}
+``` html
 <video autoplay controls  poster="images/poster.jpg">
   <source src="video/bunny.webm" type="video/webm" />
   <source src="video/bunny.mp4" type="video/mp4" />
   <track label="Descriptions" src="tracks/track.vtt" />
   <p>Sorry! Your browser doesn't support the video element.</p>
 </video>
-{% endhighlight %}
+```
 
 Open your page in the browser, click on the captions button at the right
 of the video controls and select Descriptions:
@@ -405,7 +405,7 @@ You can also get and set text tracks in JavaScript, and listen out for
 cue changes. Take a look at this example from
 [simpl.info/track](https://simpl.info/track/):
 
-{% highlight javascript %}
+``` javascript
 'use strict';
 var videoElement = document.querySelector('video');
 var textTrack = videoElement.textTracks[0]; // there's only one!
@@ -419,7 +419,7 @@ textTrack.oncuechange = function() {
     //  var obj = JSON.parse(cue.text); // cues can be data too :)
   }
 };
-{% endhighlight %}
+```
 
 **Using tracks for synchronised metadata**
 
@@ -551,7 +551,7 @@ Let's get started.
 
 Replace everything in **main.js** with the following:
 
-{% highlight javascript %}
+``` javascript
  'use strict';
  var manifestUri =
    'https://storage.googleapis.com/shaka-demo-assets/sintel/dash.mpd';
@@ -597,16 +597,16 @@ function onErrorEvent(event) {
 function onError(error) {
   console.error('Error code', error.code, 'object', error);
 }
-{% endhighlight %}
+```
 
 In **index.html** replace the video element and the script elements:
 
-{% highlight html %}
+``` html
 <video controls autoplay></video>
 
 <script src="js/dist/shaka-player.compiled.js"></script>
 <script src="js/main.js"></script>
-{% endhighlight %}
+```
 
 That's it!
 
@@ -658,7 +658,7 @@ Take a look at the manifest used in this codelab,
 [dash.mpd](http://storage.googleapis.com/shaka-demo-assets/sintel/dash.mpd).
 Part of this is shown below:
 
-{% highlight xml %}
+``` xml
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!--Generated with <a href="https://github.com/google/edash-packager">https://github.com/google/edash-packager</a> version fe6775a-release-->
@@ -732,7 +732,7 @@ Part of this is shown below:
   </Period>
 
 </MPD>
-{% endhighlight %}
+```
 
 This is not meant to be human readable! The main thing to understand is
 that the manifest enables the player to choose alternative formats for
@@ -789,9 +789,9 @@ Blender Foundation | [sintel.org](http://www.sintel.org).)
 
 From the DevTools console, you can set the subtitle language:
 
-{% highlight javascript %}
+``` javascript
 player.configure({preferredTextLanguage: 'fr'});
-{% endhighlight %}
+```
 
 From the DevTools, also take a look at the WebVTT files and the text
 track options in dash.mpd.
@@ -801,9 +801,9 @@ language from the player.
 
 For example:
 
-{% highlight javascript %}
+``` javascript
 player.configure({preferredAudioLanguage: 'fr'});
-{% endhighlight %}
+```
 
 The `player.getConfiguration()` and `player.getStats()` methods provide
 more information about video playback and the player environment:
