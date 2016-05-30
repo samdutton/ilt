@@ -443,6 +443,29 @@ with
 they are related but entirely different!</p>
 </aside>
 
+> **Using tracks for synchronised metadata**
+>
+> The track element can be used to synchronise any metadata with media
+> playback — not just subtitles.
+>
+> You can add data (such as json) to cues, then parse the value of the
+> cues when the track `cuechange` event is fired.
+>
+> [This demo](http://samdutton.com/map) shows how the track element can be
+> used to synchronise video playback with the position of a map marker,
+> and make synchronised changes to DOM elements. The position of the map
+> marker changes corresponding to the current time of the video. Time of
+> day is overlaid on the video.
+
+> **Tracks and tracks**
+>
+> Don't confuse the track element and the [TextTrack
+> API](http://www.html5rocks.com/en/tutorials/track/basics/#toc-cues-js)
+> with
+> [MediaStreamTrack](https://developer.mozilla.org/docs/Web/API/MediaStream):
+> they are related but entirely different!
+{:.warning}
+
 ### Learn more
 
 -   [Getting started with the track
