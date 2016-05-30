@@ -1,0 +1,48 @@
+<head>
+
+  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta itemprop="description" content="Instructor Led Training">
+  <meta itemprop="image" content="images/icons/icon256.png">
+  <meta itemprop="name" content="ILT">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Instructor Led Training">
+  <meta name="application-name" content="Instructor Led Training">
+  <meta name="author" content="//samdutton.com">
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="msapplication-TileColor" content="#ECEFF1">
+  <meta name="msapplication-TileImage" content="/images/icons/icon144.png">
+  <meta name="theme-color" content="#ECEFF1">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@googledevs">
+  <meta name="twitter:description" content="Instructor Led Training #pwa-ilt">
+  <meta name="twitter:image" content="images/icons/icon256.png">
+  <meta name="twitter:title" content="ILT">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:description" content="Instructor Led Training #pwa-ilt">
+  <meta property="og:image" content="images/icons/icon256.png">
+  <meta property="og:site_name" content="ILT">
+  <meta property="og:title" content="ILT">
+  <meta property="og:type" content="website">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://samdutton.github.com/ilt">
+
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="apple-touch-icon" href="/images/icons/icon48.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/images/icons/icon144.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="/images/icons/icon192.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/images/icons/icon72.png">
+  <link rel="apple-touch-icon" sizes="96x96" href="/images/icons/icon96.png">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="icon" sizes="32x32" href="/images/icons/icon32.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="shortcut icon" href="/images/icons/icon72.png">
+  <link rel="stylesheet" href="{{ "/css/syntax.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+
+</head>
