@@ -176,15 +176,14 @@ Try it out:
 What if you want to serve video to Safari users? Safari supports MP4
 video but not WebM.
 
-**What's WebM?**
-
-MP4 and WebM are container formats. You can think of these a bit like
-.zip files, containing both audio and video components.
-
-Most commonly, MP4 stores audio using AAC compression and video using
-H.264.
-
-WebM uses VP8 and Vorbis or, more recently VP9 and Opus.
+<aside class="note">
+  <p><strong>What's WebM?</strong></p>
+  <p>MP4 and WebM are container formats. You can think of these a bit like
+  .zip files, containing both audio and video components.</p>
+  <p>Most commonly, MP4 stores audio using AAC compression and video using
+  H.264.</p>
+  <p>WebM uses VP8 and Vorbis or, more recently VP9 and Opus.</p>
+</aside>
 
 ### The source element
 
@@ -225,10 +224,11 @@ WebM file to 'sniff' the format. That requires one more resource
 request, and additional processing, which is not good anywhere,
 particularly on mobile.
 
-**Top Tip!**
-
-Make sure your server reports [the correct video MIME
-type](https://youtu.be/j5fYOYrsocs?t=3m56s).
+<aside class="note">
+  <p><strong>Top Tip!</strong></p>
+  <p>Make sure your server reports [the correct video MIME
+type](https://youtu.be/j5fYOYrsocs?t=3m56s).</p>
+</aside>
 
 ### Format support
 
@@ -312,18 +312,18 @@ without needing to download video or start playback. The only downside
 is that using a poster image incurs an additional file request, which
 consumes a little bit of bandwidth and requires rendering.
 
-**Choose the right resolution**
-
-Serve video at an appropriate resolution for the target device — not too
-big, not too small. Don't just tweak the video element size! There's no
-point in serving 1080x1920 files to phones with a small viewport when
-360x640px looks just as good.
-
-You can use media queries to choose a different video depending on the
-viewport dimensions. Try this out at
-[simpl.info/video/mq](https://simpl.info/video/mq): with a bigger
-viewport, you get the bigger video, and with a smaller viewport you get
-the smaller video.
+<aside class="note">
+  <p><strong>Choose the right resolution</strong></p>
+  <p>Serve video at an appropriate resolution for the target device — not too
+  big, not too small. Don't just tweak the video element size! There's no
+  point in serving 1080x1920 files to phones with a small viewport when
+  360x640px looks just as good.</p>
+  <p>You can use media queries to choose a different video depending on the
+  viewport dimensions. Try this out at
+  [simpl.info/video/mq](https://simpl.info/video/mq): with a bigger
+  viewport, you get the bigger video, and with a smaller viewport you get
+  the smaller video.</p>
+</aside>
 
 ### Learn more
 
@@ -415,33 +415,33 @@ textTrack.oncuechange = function() {
   var cue = this.activeCues[0]; // assuming there is only one active cue
   if (cue) {
     data.innerHTML = cue.startTime + '-' + cue.endTime + ': ' + cue.text +
-    '<br />' + data.innerHTML;
+        '<br />' + data.innerHTML;
     //  var obj = JSON.parse(cue.text); // cues can be data too :)
   }
 };
 ```
 
-**Using tracks for synchronised metadata**
+<aside class="note">
+  <p><strong>Using tracks for synchronised metadata</strong></p>
+  <p>The track element can be used to synchronise any metadata with media
+  playback — not just subtitles.</p>
+  <p>You can add data (such as json) to cues, then parse the value of the
+  cues when the track `cuechange` event is fired.</p>
+  <p>[This demo](http://samdutton.com/map) shows how the track element can be
+  used to synchronise video playback with the position of a map marker,
+  and make synchronised changes to DOM elements. The position of the map
+  marker changes corresponding to the current time of the video. Time of
+  day is overlaid on the video.</p>
+</aside>
 
-The track element can be used to synchronise any metadata with media
-playback — not just subtitles.
-
-You can add data (such as json) to cues, then parse the value of the
-cues when the track `cuechange` event is fired.
-
-[This demo](http://samdutton.com/map) shows how the track element can be
-used to synchronise video playback with the position of a map marker,
-and make synchronised changes to DOM elements. The position of the map
-marker changes corresponding to the current time of the video. Time of
-day is overlaid on the video.
-
-**Tracks and tracks**
-
-Don't confuse the track element and the [TextTrack
+<aside class="warning">
+<p><strong>Tracks and tracks</strong></p>
+<p>Don't confuse the track element and the [TextTrack
 API](http://www.html5rocks.com/en/tutorials/track/basics/#toc-cues-js)
 with
 [MediaStreamTrack](https://developer.mozilla.org/docs/Web/API/MediaStream):
-they are related but entirely different!
+they are related but entirely different!</p>
+</aside>
 
 ### Learn more
 
