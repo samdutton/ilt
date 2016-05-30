@@ -86,10 +86,3 @@ header {
   background-color: #1e88e5;
   padding: 1em;
 }
-
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import
-  "base",
-  "layout",
-  "syntax-highlighting"
-;
