@@ -146,9 +146,9 @@ Let's get started!
 Add a video element to **index.html** in your work folder:
 
 {% highlight html %}
-&lt;video autoplay controls src=&quot;video/bunny.webm&quot;&gt;
-  &lt;p&gt;Sorry! Your browser doesn't support the video element.&lt;/p&gt;
-&lt;/video&gt;
+<video autoplay controls src="video/bunny.webm">
+  <p>Sorry! Your browser doesn't support the video element.</p>
+</video>
 {% endhighlight %}
 
 Notice that the video element always has a closing `</video>` tag:
@@ -166,9 +166,9 @@ This enables multiple views on the same video.
 Try it out:
 
 {% highlight html %}
-&lt;video autoplay controls src=&quot;video/bunny.webm#t=25,26&quot;&gt;
-  &lt;p&gt;Sorry! Your browser doesn't support the video element.&lt;/p&gt;
-&lt;/video&gt;
+<video autoplay controls src="video/bunny.webm#t=25,26">
+  <p>Sorry! Your browser doesn't support the video element.</p>
+</video>
 {% endhighlight %}
 
 ### Video formats
@@ -193,11 +193,11 @@ formats. MP4 and WebM cover all modern browsers, including all mobile
 browsers. Specify video sources in order of preference:
 
 {% highlight html %}
-&lt;video autoplay controls&gt;
-  &lt;source src=&quot;video/bunny.webm&quot; /&gt;
-  &lt;source src=&quot;video/bunny.mp4&quot; /&gt;
-  &lt;p&gt;Sorry! Your browser doesn't support the video element.&lt;/p&gt;
-&lt;/video&gt;
+<video autoplay controls>
+  <source src="video/bunny.webm" />
+  <source src="video/bunny.mp4" />
+  <p>Sorry! Your browser doesn't support the video element.</p>
+</video>
 {% endhighlight %}
 
 Adding a `type` attribute to a `source` element enables the browser to
@@ -205,11 +205,11 @@ select a video source without having to download part of the video to
 check:
 
 {% highlight html %}
-&lt;video autoplay controls&gt;
-  &lt;source src=&quot;video/bunny.webm&quot; type=&quot;video/webm&quot; /&gt;
-  &lt;source src=&quot;video/bunny.mp4&quot; type=&quot;video/mp4&quot; /&gt;
-  &lt;p&gt;Sorry! Your browser doesn't support the video element.&lt;/p&gt;
-&lt;/video&gt;
+<video autoplay controls>
+  <source src="video/bunny.webm" type="video/webm" />
+  <source src="video/bunny.mp4" type="video/mp4" />
+  <p>Sorry! Your browser doesn't support the video element.</p>
+</video>
 {% endhighlight %}
 
 **Try it out!**
@@ -304,7 +304,7 @@ There's already a poster image in the **work/images** folder:
 video element:
 
 {% highlight html %}
-&lt;video autoplay controls poster="images/poster.jpg"&gt;
+<video autoplay controls poster="images/poster.jpg">
 {% endhighlight %}
 
 Including a poster attribute gives viewers a meaningful idea of content
@@ -331,7 +331,7 @@ the smaller video.
 -   [Big Buck Bunny](https://peach.blender.org/): more about the video
     used in this codelab
 
-## Add subtitles, captions &amp; descriptions
+## Add subtitles, captions & descriptions
 
 Duration: 2:00
 
@@ -352,19 +352,19 @@ file named **track.vtt**. Add the following text to that file:
 {% highlight html %}
 WEBVTT FILE
 
-00:00:00.000 --&gt; 00:00:02.000
+00:00:00.000 --> 00:00:02.000
 Opening titles
 
-00:00:03.500 --&gt; 00:00:05.000
+00:00:03.500 --> 00:00:05.000
 A rabbit hole at the base of a tree
 
-00:00:09.000 --&gt; 00:00:11.000
+00:00:09.000 --> 00:00:11.000
 An enormous white rabbit in a field
 
-00:00:13.000 --&gt; 00:00:14.500
+00:00:13.000 --> 00:00:14.500
 Three rodents, one throws an acorn at the rabbit
 
-00:00:15.500 --&gt; 00:00:16.750
+00:00:15.500 --> 00:00:16.750
 The rabbit looks shocked
 {% endhighlight %}
 
@@ -373,18 +373,18 @@ This format is called WebVTT.
 Add the following `track` element as a child of your video element:
 
 {% highlight html %}
-&lt;track label="Descriptions" src="tracks/track.vtt" /&gt;
+<track label="Descriptions" src="tracks/track.vtt" />
 {% endhighlight %}
 
 Your video element code should now look like this:
 
 {% highlight html %}
-&lt;video autoplay controls  poster=&quot;images/poster.jpg&quot;&gt;
-  &lt;source src=&quot;video/bunny.webm&quot; type=&quot;video/webm&quot; /&gt;
-  &lt;source src=&quot;video/bunny.mp4&quot; type=&quot;video/mp4&quot; /&gt;
-  &lt;track label=&quot;Descriptions&quot; src=&quot;tracks/track.vtt&quot; /&gt;
-  &lt;p&gt;Sorry! Your browser doesn't support the video element.&lt;/p&gt;
-&lt;/video&gt;
+<video autoplay controls  poster="images/poster.jpg">
+  <source src="video/bunny.webm" type="video/webm" />
+  <source src="video/bunny.mp4" type="video/mp4" />
+  <track label="Descriptions" src="tracks/track.vtt" />
+  <p>Sorry! Your browser doesn't support the video element.</p>
+</video>
 {% endhighlight %}
 
 Open your page in the browser, click on the captions button at the right
@@ -553,7 +553,8 @@ Replace everything in **main.js** with the following:
 
 {% highlight javascript %}
  'use strict';
- var manifestUri = 'https://storage.googleapis.com/shaka-demo-assets/sintel/dash.mpd';
+ var manifestUri =
+   'https://storage.googleapis.com/shaka-demo-assets/sintel/dash.mpd';
  // Install built-in polyfills to patch browser incompatibilities.
  shaka.polyfill.installAll();
  // Check to see if the browser supports the basic APIs Shaka needs.
@@ -601,10 +602,10 @@ function onError(error) {
 In **index.html** replace the video element and the script elements:
 
 {% highlight html %}
-&lt;video controls autoplay&gt;&lt;/video&gt;
+<video controls autoplay></video>
 
-&lt;script src=&quot;js/dist/shaka-player.compiled.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;js/main.js&quot;&gt;&lt;/script&gt;
+<script src="js/dist/shaka-player.compiled.js"></script>
+<script src="js/main.js"></script>
 {% endhighlight %}
 
 That's it!
@@ -658,79 +659,79 @@ Take a look at the manifest used in this codelab,
 Part of this is shown below:
 
 {% highlight xml %}
-&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<?xml version="1.0" encoding="UTF-8"?>
 
-&lt;!--Generated with &lt;a href=&quot;https://github.com/google/edash-packager&quot;&gt;https://github.com/google/edash-packager&lt;/a&gt; version fe6775a-release--&gt;
+<!--Generated with <a href="https://github.com/google/edash-packager">https://github.com/google/edash-packager</a> version fe6775a-release-->
 
-&lt;MPD xmlns=&quot;urn:mpeg:dash:schema:mpd:2011&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; xsi:schemaLocation=&quot;urn:mpeg:dash:schema:mpd:2011 DASH-MPD.xsd&quot; xmlns:cenc=&quot;urn:mpeg:cenc:2013&quot; minBufferTime=&quot;PT2S&quot; type=&quot;static&quot; profiles=&quot;urn:mpeg:dash:profile:isoff-on-demand:2011&quot; mediaPresentationDuration=&quot;PT888.0533447265625S&quot;&gt;
+<MPD xmlns="urn:mpeg:dash:schema:mpd:2011" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="urn:mpeg:dash:schema:mpd:2011 DASH-MPD.xsd" xmlns:cenc="urn:mpeg:cenc:2013" minBufferTime="PT2S" type="static" profiles="urn:mpeg:dash:profile:isoff-on-demand:2011" mediaPresentationDuration="PT888.0533447265625S">
 
-  &lt;Period id=&quot;0&quot;&gt;
-    &lt;AdaptationSet id=&quot;0&quot; contentType=&quot;text&quot; lang=&quot;nl&quot;&gt;
-      &lt;Representation id=&quot;0&quot; bandwidth=&quot;256&quot; mimeType=&quot;text/vtt&quot;&gt;
-        &lt;BaseURL&gt;s-dut.webvtt&lt;/BaseURL&gt;
-      &lt;/Representation&gt;
-    &lt;/AdaptationSet&gt;
-    &lt;AdaptationSet id=&quot;1&quot; contentType=&quot;text&quot; lang=&quot;en&quot;&gt;
-      &lt;Representation id=&quot;1&quot; bandwidth=&quot;256&quot; mimeType=&quot;text/vtt&quot;&gt;
-        &lt;BaseURL&gt;s-eng.webvtt&lt;/BaseURL&gt;
-      &lt;/Representation&gt;
-    &lt;/AdaptationSet&gt;
+  <Period id="0">
+    <AdaptationSet id="0" contentType="text" lang="nl">
+      <Representation id="0" bandwidth="256" mimeType="text/vtt">
+        <BaseURL>s-dut.webvtt</BaseURL>
+      </Representation>
+    </AdaptationSet>
+    <AdaptationSet id="1" contentType="text" lang="en">
+      <Representation id="1" bandwidth="256" mimeType="text/vtt">
+        <BaseURL>s-eng.webvtt</BaseURL>
+      </Representation>
+    </AdaptationSet>
     ...
-    &lt;AdaptationSet id=&quot;10&quot; contentType=&quot;video&quot; maxWidth=&quot;3840&quot; maxHeight=&quot;1636&quot; frameRate=&quot;1000000/42000&quot; par=&quot;40:17&quot;&gt;
-      &lt;Representation id=&quot;10&quot; bandwidth=&quot;216910&quot; codecs=&quot;vp9&quot; mimeType=&quot;video/webm&quot; sar=&quot;427:426&quot; width=&quot;426&quot; height=&quot;182&quot;&gt;
-        &lt;BaseURL&gt;v-0240p-0300k-vp9.webm&lt;/BaseURL&gt;
-        &lt;SegmentBase indexRange=&quot;24075612-24076886&quot; timescale=&quot;1000000&quot;&gt;
-          &lt;Initialization range=&quot;0-282&quot;/&gt;
-        &lt;/SegmentBase&gt;
-      &lt;/Representation&gt;
-      &lt;Representation id=&quot;11&quot; bandwidth=&quot;393793&quot; codecs=&quot;vp9&quot; mimeType=&quot;video/webm&quot; sar=&quot;639:640&quot; width=&quot;640&quot; height=&quot;272&quot;&gt;
-        &lt;BaseURL&gt;v-0360p-0550k-vp9.webm&lt;/BaseURL&gt;
-        &lt;SegmentBase indexRange=&quot;43709632-43710931&quot; timescale=&quot;1000000&quot;&gt;
-          &lt;Initialization range=&quot;0-284&quot;/&gt;
-        &lt;/SegmentBase&gt;
-      &lt;/Representation&gt;
+    <AdaptationSet id="10" contentType="video" maxWidth="3840" maxHeight="1636" frameRate="1000000/42000" par="40:17">
+      <Representation id="10" bandwidth="216910" codecs="vp9" mimeType="video/webm" sar="427:426" width="426" height="182">
+        <BaseURL>v-0240p-0300k-vp9.webm</BaseURL>
+        <SegmentBase indexRange="24075612-24076886" timescale="1000000">
+          <Initialization range="0-282"/>
+        </SegmentBase>
+      </Representation>
+      <Representation id="11" bandwidth="393793" codecs="vp9" mimeType="video/webm" sar="639:640" width="640" height="272">
+        <BaseURL>v-0360p-0550k-vp9.webm</BaseURL>
+        <SegmentBase indexRange="43709632-43710931" timescale="1000000">
+          <Initialization range="0-284"/>
+        </SegmentBase>
+      </Representation>
       ...
-      &lt;Representation id=&quot;14&quot; bandwidth=&quot;132318&quot; codecs=&quot;mp4a.40.2&quot; mimeType=&quot;audio/mp4&quot; audioSamplingRate=&quot;48000&quot;&gt;
-        &lt;AudioChannelConfiguration schemeIdUri=&quot;urn:mpeg:dash:23003:3:audio_channel_configuration:2011&quot; value=&quot;2&quot;/&gt;
-        &lt;BaseURL&gt;a-eng-0128k-aac.mp4&lt;/BaseURL&gt;
-        &lt;SegmentBase indexRange=&quot;745-1844&quot; timescale=&quot;48000&quot;&gt;
-          &lt;Initialization range=&quot;0-744&quot;/&gt;
-        &lt;/SegmentBase&gt;
-      &lt;/Representation&gt;
-    &lt;/AdaptationSet&gt;
-    &lt;AdaptationSet id=&quot;12&quot; contentType=&quot;audio&quot; lang=&quot;en&quot;&gt;
-      &lt;Representation id=&quot;16&quot; bandwidth=&quot;110385&quot; codecs=&quot;vorbis&quot; mimeType=&quot;audio/webm&quot; audioSamplingRate=&quot;48000&quot;&gt;
-        &lt;AudioChannelConfiguration schemeIdUri=&quot;urn:mpeg:dash:23003:3:audio_channel_configuration:2011&quot; value=&quot;2&quot;/&gt;
-        &lt;BaseURL&gt;a-eng-0128k-libvorbis.webm&lt;/BaseURL&gt;
-        &lt;SegmentBase indexRange=&quot;12251633-12253142&quot; timescale=&quot;1000000&quot;&gt;
-          &lt;Initialization range=&quot;0-4550&quot;/&gt;
-        &lt;/SegmentBase&gt;
-      &lt;/Representation&gt;
-    &lt;/AdaptationSet&gt;
-    &lt;AdaptationSet id=&quot;13&quot; contentType=&quot;video&quot; maxWidth=&quot;3840&quot; maxHeight=&quot;1636&quot; frameRate=&quot;12288/512&quot; subsegmentAlignment=&quot;true&quot; par=&quot;40:17&quot;&gt;
-      &lt;Representation id=&quot;17&quot; bandwidth=&quot;100729&quot; codecs=&quot;avc1.42c01e&quot; mimeType=&quot;video/mp4&quot; sar=&quot;110:109&quot; width=&quot;256&quot; height=&quot;110&quot;&gt;
-        &lt;BaseURL&gt;v-0144p-0100k-libx264.mp4&lt;/BaseURL&gt;
-        &lt;SegmentBase indexRange=&quot;828-1747&quot; timescale=&quot;12288&quot;&gt;
-          &lt;Initialization range=&quot;0-827&quot;/&gt;
-        &lt;/SegmentBase&gt;
-      &lt;/Representation&gt;
+      <Representation id="14" bandwidth="132318" codecs="mp4a.40.2" mimeType="audio/mp4" audioSamplingRate="48000">
+        <AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="2"/>
+        <BaseURL>a-eng-0128k-aac.mp4</BaseURL>
+        <SegmentBase indexRange="745-1844" timescale="48000">
+          <Initialization range="0-744"/>
+        </SegmentBase>
+      </Representation>
+    </AdaptationSet>
+    <AdaptationSet id="12" contentType="audio" lang="en">
+      <Representation id="16" bandwidth="110385" codecs="vorbis" mimeType="audio/webm" audioSamplingRate="48000">
+        <AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="2"/>
+        <BaseURL>a-eng-0128k-libvorbis.webm</BaseURL>
+        <SegmentBase indexRange="12251633-12253142" timescale="1000000">
+          <Initialization range="0-4550"/>
+        </SegmentBase>
+      </Representation>
+    </AdaptationSet>
+    <AdaptationSet id="13" contentType="video" maxWidth="3840" maxHeight="1636" frameRate="12288/512" subsegmentAlignment="true" par="40:17">
+      <Representation id="17" bandwidth="100729" codecs="avc1.42c01e" mimeType="video/mp4" sar="110:109" width="256" height="110">
+        <BaseURL>v-0144p-0100k-libx264.mp4</BaseURL>
+        <SegmentBase indexRange="828-1747" timescale="12288">
+          <Initialization range="0-827"/>
+        </SegmentBase>
+      </Representation>
       ...
-      &lt;Representation id=&quot;28&quot; bandwidth=&quot;9270693&quot; codecs=&quot;avc1.640028&quot; mimeType=&quot;video/mp4&quot; sar=&quot;1:1&quot; width=&quot;2560&quot; height=&quot;1090&quot;&gt;
-        &lt;BaseURL&gt;v-1440p-9000k-libx264.mp4&lt;/BaseURL&gt;
-        &lt;SegmentBase indexRange=&quot;812-1731&quot; timescale=&quot;12288&quot;&gt;
-          &lt;Initialization range=&quot;0-811&quot;/&gt;
-        &lt;/SegmentBase&gt;
-      &lt;/Representation&gt;
-      &lt;Representation id=&quot;29&quot; bandwidth=&quot;17674702&quot; codecs=&quot;avc1.640028&quot; mimeType=&quot;video/mp4&quot; sar=&quot;1636:1635&quot; width=&quot;3840&quot; height=&quot;1636&quot;&gt;
-        &lt;BaseURL&gt;v-2160p-17000k-libx264.mp4&lt;/BaseURL&gt;
-        &lt;SegmentBase indexRange=&quot;831-1750&quot; timescale=&quot;12288&quot;&gt;
-          &lt;Initialization range=&quot;0-830&quot;/&gt;
-        &lt;/SegmentBase&gt;
-      &lt;/Representation&gt;
-    &lt;/AdaptationSet&gt;
-  &lt;/Period&gt;
+      <Representation id="28" bandwidth="9270693" codecs="avc1.640028" mimeType="video/mp4" sar="1:1" width="2560" height="1090">
+        <BaseURL>v-1440p-9000k-libx264.mp4</BaseURL>
+        <SegmentBase indexRange="812-1731" timescale="12288">
+          <Initialization range="0-811"/>
+        </SegmentBase>
+      </Representation>
+      <Representation id="29" bandwidth="17674702" codecs="avc1.640028" mimeType="video/mp4" sar="1636:1635" width="3840" height="1636">
+        <BaseURL>v-2160p-17000k-libx264.mp4</BaseURL>
+        <SegmentBase indexRange="831-1750" timescale="12288">
+          <Initialization range="0-830"/>
+        </SegmentBase>
+      </Representation>
+    </AdaptationSet>
+  </Period>
 
-&lt;/MPD&gt;
+</MPD>
 {% endhighlight %}
 
 This is not meant to be human readable! The main thing to understand is
