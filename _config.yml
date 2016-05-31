@@ -3,8 +3,8 @@ title: ILT
 email: samdutton@gmail.com
 description: >
   ILT documents.
-baseurl: "/ilt"
-url: "http://samdutton.github.com"
+baseurl: "/content"
+url: "https://github.com/samdutton/ilt"
 twitter_username: sw12
 github_username:  samdutton
 source: content
