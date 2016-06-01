@@ -1,4 +1,4 @@
-# baseurl: "/ilt"
+baseurl: ilt
 description: >
   ILT documents.
 email: samdutton@gmail.com
@@ -6,7 +6,6 @@ gems:
   - jekyll-sitemap
 github_username:  samdutton
 markdown: kramdown
-site.baseurl: ilt
 title: ILT
 twitter_username: sw12
 url: "https://github.com/samdutton/ilt"
