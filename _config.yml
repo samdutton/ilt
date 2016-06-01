@@ -1,14 +1,12 @@
-# Site settings
-title: ILT
-email: samdutton@gmail.com
+# baseurl: "/ilt"
 description: >
   ILT documents.
-baseurl: "/content"
-url: "https://github.com/samdutton/ilt"
-twitter_username: sw12
+email: samdutton@gmail.com
+gems:
+  - jekyll-sitemap
 github_username:  samdutton
-source: content
-destination: jekyll/_site
-
-# Build settings
 markdown: kramdown
+site.baseurl: ilt
+title: ILT
+twitter_username: sw12
+url: "https://github.com/samdutton/ilt"

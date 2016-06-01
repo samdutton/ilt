@@ -1,0 +1,175 @@
+.code {
+  background-color: #28323f;
+  color: white;
+  font-family: 'Source Code Pro', 'Courier New', monospace;
+  white-space: pre;
+}
+
+.container {
+  background-color: #e0e0e0;
+  float: left;
+  padding: 60px 0 30px 256px;
+  width: calc(100% - 256px);
+}
+
+.duration {
+  color: #aaa;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.github {
+  font-weight: 100;
+  position:fixed;
+  bottom: 10px
+}
+
+.home-arrow {
+  display: block;
+  float: left;
+  fill: white;
+  margin: 0 15px 0 0;
+  width: 24px;
+}
+
+.note {
+  background-color: #ded;
+  border-color: #6a6;
+  color: #464;
+}
+
+.warning {
+  background-color: #fed;
+  border-color: #db8a61;
+  color: #842;
+}
+
+a {
+  color: #0097a7;
+}
+
+nav a {
+  color: #212121;
+  display: block;
+  line-height: 1.5em;
+  margin: 0 0 1em 0;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #0097a7;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  margin: 20px;
+}
+
+aside {
+  border-left: 3px solid;
+  margin: 0 0 1em 0;
+  padding: 5px 5px 5px 10px;
+}
+
+blockquote {
+  background-color: #ded;
+  border-color: #6a6;
+  border-left: 3px solid;
+  color: #464;
+  margin: 0 0 1em 0;
+  padding: 5px 5px 5px 10px;
+}
+
+body {
+  background: #eee;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+code {
+  font-family: 'Source Code Pro', 'Courier New', monospace;
+}
+
+h1 {
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.1em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+h2:first-of-type {
+  margin-top: 0;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.1em;
+  margin: 1.5em 0 0 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+header {
+  background-color: #1e88e5;
+  box-shadow: 1px 1px 16px #ccc;
+  margin: 0 0 30px 0;
+  padding: 20px 20px 20px 25px ;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+  background-color: #f5f5f5;
+  box-shadow: 1px 1px 16px #ccc;
+  float: left;
+  height: 100%;
+  padding: 99px 30px 30px 30px;
+  position: fixed;
+  top: 0;
+  width: 196px;
+}
+
+pre {
+  background-color: #f6f6f6;
+  border-radius: 3px;
+  font-family: 'Source Code Pro','Courier New', monospace;
+  margin: 0 0 1em 0;
+  padding: 5px 10px;
+  white-space: pre-wrap;
+}
+
+section {
+  background-color: white;
+  box-shadow: 1px 1px 16px #ccc;
+  margin: 0 auto;
+  max-width: calc(100% - 120px);
+  padding: 30px;
+  width: 800px;
+  height: 100%;
+}
+
+

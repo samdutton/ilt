@@ -715,7 +715,8 @@ Part of this is shown below:
       </Representation>
       ...
       <Representation id="14" bandwidth="132318" codecs="mp4a.40.2" mimeType="audio/mp4" audioSamplingRate="48000">
-        <AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="2"/>
+        <AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:
+          audio_channel_configuration:2011" value="2"/>
         <BaseURL>a-eng-0128k-aac.mp4</BaseURL>
         <SegmentBase indexRange="745-1844" timescale="48000">
           <Initialization range="0-744"/>
@@ -724,7 +725,8 @@ Part of this is shown below:
     </AdaptationSet>
     <AdaptationSet id="12" contentType="audio" lang="en">
       <Representation id="16" bandwidth="110385" codecs="vorbis" mimeType="audio/webm" audioSamplingRate="48000">
-        <AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="2"/>
+        <AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:
+          audio_channel_configuration:2011" value="2"/>
         <BaseURL>a-eng-0128k-libvorbis.webm</BaseURL>
         <SegmentBase indexRange="12251633-12253142" timescale="1000000">
           <Initialization range="0-4550"/>
