@@ -1,8 +1,8 @@
 ---
 layout: guide
 chapter: High performance video for the web
-section: Congratulations!
-section-number: 9
+title: Congratulations!
+index: 9
 ---
 
 Duration: 2:00

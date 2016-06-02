@@ -1,8 +1,8 @@
 ---
 layout: guide
 chapter: High performance video for the web
-section: Get started
-section-number: 4
+title: Get started
+index: 4
 ---
 
 Duration: 2:00

@@ -11,6 +11,12 @@
   width: calc(100% - 256px);
 }
 
+.current {
+  background-color: #e0e0e0;
+  background-color: #b3b3b3;
+  border-radius: 4px;
+}
+
 .duration {
   color: #aaa;
   font-size: 16px;
@@ -18,9 +24,12 @@
 }
 
 .github {
-  font-weight: 100;
+  background-color: #f5f5f5;
+  bottom: 0;
+  left: 25px;
+  padding: 25px 0 25px 0;
   position:fixed;
-  bottom: 10px
+  width: 200px;
 }
 
 .home-arrow {
@@ -31,10 +40,33 @@
   width: 24px;
 }
 
+.index {
+  background: white;
+  border: 2px solid #bdbdbd;
+  border-radius: 50%;
+  height: 24px;
+  line-height: 24px;
+  margin: 0 8px 0 0;
+  text-align: center;
+  width: 24px;
+}
+
+.current .index {
+  border-color: #2196f3;
+}
+
 .note {
   background-color: #ded;
   border-color: #6a6;
   color: #464;
+}
+
+.title {
+  width: 155px;
+}
+
+.current .title {
+  font-weight: 600;
 }
 
 .warning {
@@ -47,16 +79,26 @@ a {
   color: #0097a7;
 }
 
-nav a {
+.links a {
   color: #212121;
   display: block;
-  line-height: 1.5em;
-  margin: 0 0 1em 0;
+  line-height: 60px;
+  margin: 0 0 28px 0;
+  min-height: 60px;
+  padding: 0 0 0 10px;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.github a {
+  color: #212121;
+  display: block;
+  font-weight: 100;
+  margin: 0 0 12px 0;
   text-decoration: none;
 }
 
 nav a:hover {
-  color: #0097a7;
 }
 
 body {
@@ -100,6 +142,7 @@ h1 {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  width: calc(100% - 65px);
 }
 
 h2 {
@@ -130,7 +173,7 @@ header {
   box-shadow: 1px 1px 16px #ccc;
   padding: 20px 20px 20px 25px;
   position: fixed;
-  width: 100%;
+  width: calc(100% - 256px);
   top: 0;
 }
 
@@ -145,10 +188,10 @@ nav {
   box-shadow: 1px 1px 16px #ccc;
   float: left;
   height: 100%;
-  padding: 133px 30px 30px 30px;
+  padding: 28px 15px 30px 15px;
   position: fixed;
   top: 0;
-  width: 196px;
+  width: 226px;
 }
 
 pre {
@@ -171,3 +214,8 @@ section {
 }
 
 
+nav span {
+  display: inline-block;
+  line-height: 24px;
+  vertical-align: middle;
+}

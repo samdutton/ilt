@@ -1,8 +1,8 @@
 ---
 layout: guide
 chapter: High performance video for the web
-section: Build a video stream in JavaScript
-section-number: 7
+title: Build a video stream in JavaScript
+index: 7
 ---
 
 Duration: 2:00

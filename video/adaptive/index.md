@@ -1,8 +1,8 @@
 ---
 layout: guide
 chapter: High performance video for the web
-section: Implement adaptive streaming
-section-number: 8
+title: Implement adaptive streaming
+index: 8
 ---
 
 Duration: 2:00

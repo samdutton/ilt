@@ -1,8 +1,8 @@
 ---
 layout: guide
 chapter: High performance video for the web
-section: What are you going to build?
-section-number: 2
+title: What are you going to build?
+index: 2
 ---
 
 You will build a player that enables you to deliver video using Dynamic

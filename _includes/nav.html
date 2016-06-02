@@ -1,12 +1,19 @@
 <nav>
 
   <!-- <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a> -->
-  {% assign pages = site.pages | sort:"section-number"  %}
-  {% for page in pages %}
-    {% if page.section %}
-      <a href="{{ page.url | prepend: site.baseurl }}">{{ page.section }}</a>
+  {% assign pages = site.pages | sort:"index"  %}
+
+  <div class="links">
+  {% for p in pages %}
+    {% if p.title %}
+      <a href="{{ p.url | prepend: site.baseurl }}"
+          {% if p.title == page.title %}class="current"{% endif %}>
+        <span class="index">{{p.index}}</span>
+        <span class="title">{{ p.title }}</span>
+      </a>
     {% endif %}
   {% endfor %}
+  </div>
 
   <div class="github">
     <a href="https://github.com/samdutton/ilt/edit/gh-pages{{page.url}}/index.md" title="Edit this page on GitHub">Edit this page</a>

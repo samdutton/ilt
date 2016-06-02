@@ -1,8 +1,8 @@
 ---
 layout: guide
 chapter: High performance video for the web
-section: Overview
-section-number: 3
+title: Overview
+index: 3
 ---
 
 Duration: 0:30
