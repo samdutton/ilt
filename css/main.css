@@ -6,7 +6,6 @@
 }
 
 .container {
-  background-color: #e0e0e0;
   float: left;
   padding: 60px 0 30px 256px;
   width: calc(100% - 256px);
@@ -83,7 +82,7 @@ blockquote {
 }
 
 body {
-  background: #eee;
+  background-color: #e0e0e0;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -129,8 +128,7 @@ h3 {
 header {
   background-color: #1e88e5;
   box-shadow: 1px 1px 16px #ccc;
-  margin: 0 0 30px 0;
-  padding: 20px 20px 20px 25px ;
+  padding: 20px 20px 20px 25px;
   position: fixed;
   width: 100%;
   top: 0;
@@ -147,7 +145,7 @@ nav {
   box-shadow: 1px 1px 16px #ccc;
   float: left;
   height: 100%;
-  padding: 99px 30px 30px 30px;
+  padding: 133px 30px 30px 30px;
   position: fixed;
   top: 0;
   width: 196px;
@@ -165,7 +163,7 @@ pre {
 section {
   background-color: white;
   box-shadow: 1px 1px 16px #ccc;
-  margin: 0 auto;
+  margin: 30px auto;
   max-width: calc(100% - 120px);
   padding: 30px;
   width: 800px;

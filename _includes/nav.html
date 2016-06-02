@@ -1,10 +1,10 @@
 <nav>
 
   <!-- <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a> -->
-
-  {% for page in site.pages %}
-    {% if page.title %}
-      <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+  {% assign pages = site.pages | sort:"section-number"  %}
+  {% for page in pages %}
+    {% if page.section %}
+      <a href="{{ page.url | prepend: site.baseurl }}">{{ page.section }}</a>
     {% endif %}
   {% endfor %}
 
