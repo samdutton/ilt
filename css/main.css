@@ -26,17 +26,21 @@
 .github {
   background-color: #f5f5f5;
   bottom: 0;
-  left: 25px;
-  padding: 25px 0 25px 0;
+  left: 65px;
+  padding: 15px 0 15px 0;
   position:fixed;
-  width: 200px;
+  width: 191px;
+}
+
+footer .github {
+  display: none;
 }
 
 .home-arrow {
   display: block;
   float: left;
   fill: white;
-  margin: 0 15px 0 0;
+  margin: 0 30px 0 0;
   width: 24px;
 }
 
@@ -83,7 +87,7 @@ a {
   color: #212121;
   display: block;
   line-height: 60px;
-  margin: 0 0 28px 0;
+  margin: 0 0 0px 0;
   min-height: 60px;
   padding: 0 0 0 10px;
   text-decoration: none;
@@ -94,7 +98,7 @@ a {
   color: #212121;
   display: block;
   font-weight: 100;
-  margin: 0 0 12px 0;
+  margin: 0 0 8px 0;
   text-decoration: none;
 }
 
@@ -142,7 +146,7 @@ h1 {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  width: calc(100% - 65px);
+  width: calc(100% - 95px);
 }
 
 h2 {
@@ -188,7 +192,7 @@ nav {
   box-shadow: 1px 1px 16px #ccc;
   float: left;
   height: 100%;
-  padding: 28px 15px 30px 15px;
+  padding: 10px 15px 30px 15px;
   position: fixed;
   top: 0;
   width: 226px;
@@ -218,4 +222,61 @@ nav span {
   display: inline-block;
   line-height: 24px;
   vertical-align: middle;
+}
+
+@media screen and (max-width: 500px) {
+
+.container {
+  float: inherit;
+  padding: 60px 0 0 0;
+  width: 100%;
+}
+
+footer .github {
+  background-color: inherit;
+  display: block;
+  position: inherit;
+  width: 100%;
+}
+
+.github a {
+  display: inline-block; 
+  margin: 0;
+}
+
+.github a::after {
+  content: "  |  ";
+}
+
+.github a:last-of-type::after {
+  content: "";
+}
+
+footer {
+  padding: 0px 15px 15px 47px;
+}
+
+h1 {
+  font-size: 16px;
+  white-space: inherit;
+}
+  
+
+h2 {
+  font-size: 18px;
+  white-space: inherit;
+}
+
+nav {
+  display: none;
+}
+
+header {
+  width: 100%;
+}
+
+section {
+  margin-bottom: 15px;
+}
+
 }
