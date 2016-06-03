@@ -2,7 +2,7 @@
 layout: guide
 chapter: High performance video for the web
 title: Introduction
-index: 1
+index: 0
 ---
 
 It's simple to add video to your website, but how can you deliver great

@@ -2,7 +2,7 @@
 layout: guide
 chapter: High performance video for the web
 title: Congratulations!
-index: 9
+index: 8
 ---
 
 Duration: 2:00

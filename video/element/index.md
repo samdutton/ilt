@@ -2,7 +2,7 @@
 layout: guide
 chapter: High performance video for the web
 title: Make the most of the video element
-index: 5
+index: 4
 ---
 
 Duration: 5:00

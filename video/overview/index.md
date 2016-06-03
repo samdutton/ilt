@@ -2,7 +2,7 @@
 layout: guide
 chapter: High performance video for the web
 title: Overview
-index: 3
+index: 2
 ---
 
 Duration: 0:30

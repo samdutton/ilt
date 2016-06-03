@@ -1,12 +1,12 @@
-<nav>
+{% assign pages = site.pages | sort:"index"  %}
+{% assign pages = pages | where:"chapter", page.chapter  %}
 
-  <!-- <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a> -->
-  {% assign pages = site.pages | sort:"index"  %}
+<nav>
 
   <div class="links">{% for p in pages %}{% if p.title %}
       <a href="{{ p.url | prepend: site.baseurl }}"{% if p.title == page.title %} class="current"{% endif %}>
-        <span class="index">{{p.index}}</span>
-        <span class="title">{{ p.title }}</span>
+        <span class="index">{{p.index | plus:1}}</span>
+        <span class="title">{{p.title}}</span>
       </a>{% endif %}{% endfor %}
   </div>
 

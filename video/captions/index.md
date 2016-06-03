@@ -2,7 +2,7 @@
 layout: guide
 chapter: High performance video for the web
 title: Add subtitles, captions & descriptions
-index: 6
+index: 5
 ---
 
 Duration: 2:00

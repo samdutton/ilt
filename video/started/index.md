@@ -2,7 +2,7 @@
 layout: guide
 chapter: High performance video for the web
 title: Get started
-index: 4
+index: 3
 ---
 
 Duration: 2:00

@@ -2,7 +2,7 @@
 layout: guide
 chapter: High performance video for the web
 title: Build a video stream in JavaScript
-index: 7
+index: 6
 ---
 
 Duration: 2:00

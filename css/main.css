@@ -66,11 +66,11 @@ footer .github {
 }
 
 .title {
-  width: 155px;
+  width: 170px;
 }
 
 .current .title {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .warning {
@@ -100,6 +100,11 @@ a {
   font-weight: 100;
   margin: 0 0 8px 0;
   text-decoration: none;
+}
+
+header a {
+  display: inline-block;
+  width: 36px;
 }
 
 nav a:hover {
@@ -140,13 +145,18 @@ code {
 
 h1 {
   color: white;
+  display: inline-block;
   font-size: 20px;
   font-weight: 300;
-  margin: 0;
+  margin: 0 0 0 30px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  width: calc(100% - 95px);
+  width: calc(100% - 251px);
+}
+
+section h1 {
+  display: none;
 }
 
 h2 {
@@ -175,8 +185,10 @@ h3 {
 header {
   background-color: #1e88e5;
   box-shadow: 1px 1px 16px #ccc;
+  line-height: 21px;
   padding: 20px 20px 20px 25px;
   position: fixed;
+  vertical-align: middle;
   width: calc(100% - 256px);
   top: 0;
 }
@@ -224,6 +236,10 @@ nav span {
   vertical-align: middle;
 }
 
+ul {
+  padding: 0 0 0 17px;
+}
+
 @media screen and (max-width: 500px) {
 
 .container {
@@ -241,42 +257,78 @@ footer .github {
 
 .github a {
   display: inline-block; 
-  margin: 0;
 }
 
 .github a::after {
-  content: "  |  ";
+  color: #aaa;
+  content: "  •  ";
+  margin: 0 9px;
 }
 
 .github a:last-of-type::after {
   content: "";
 }
 
+header a {
+  display: inline-block;
+  text-align: center;
+  width: 33%;
+}
+
+header a:first-of-type {
+  text-align: left;
+  width: calc((100% - 20px) / 3);
+}
+
+header a:last-of-type {
+  text-align: right;
+}
+
+
 footer {
   padding: 0px 15px 15px 47px;
 }
 
-h1 {
-  font-size: 16px;
-  white-space: inherit;
-}
-  
+header h1 {
+  display: none;
+}  
+
+section h1 {
+  border-bottom: 1px solid #ccc;
+  color: #666;
+  display: block;
+  font-size: 20px;
+  font-weight: 100;
+  margin: 0 0 50px 0;
+  overflow: inherit;
+  padding: 0 0 25px 0;
+  text-overflow: inherit;
+  white-space: nowrap;
+  width: 100%;
+}  
 
 h2 {
   font-size: 18px;
+  font-weight: 400;
   white-space: inherit;
+}
+
+header {
+  padding: 15px 10px;
+  text-align: center;
+  width: calc(100% - 20px);
 }
 
 nav {
   display: none;
 }
 
-header {
-  width: 100%;
-}
-
 section {
   margin-bottom: 15px;
+}
+
+header svg {
+  vertical-align: middle;
 }
 
 }
