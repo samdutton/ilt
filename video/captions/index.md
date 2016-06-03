@@ -108,10 +108,7 @@ textTrack.oncuechange = function() {
 
 <aside class="warning">
 <p><strong>Tracks and tracks</strong></p>
-<p>Don't confuse the track element and the [TextTrack
-API](http://www.html5rocks.com/en/tutorials/track/basics/#toc-cues-js)
-with
-[MediaStreamTrack](https://developer.mozilla.org/docs/Web/API/MediaStream):
+<p>Don't confuse the track element and the <a href="http://www.html5rocks.com/en/tutorials/track/basics/#toc-cues-js" title="HTML5 Rocks article about the Track element">TextTrack API</a> with <a href="https://developer.mozilla.org/docs/Web/API/MediaStream" title="MDN documentation for MediaStream and MediaStreamTrack">MediaStreamTrack</a>:
 they are related but entirely different!</p>
 </aside>
 
