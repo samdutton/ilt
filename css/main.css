@@ -215,6 +215,7 @@ pre {
   border-radius: 3px;
   font-family: 'Source Code Pro','Courier New', monospace;
   margin: 0 0 1em 0;
+  overflow-x: scroll;
   padding: 5px 10px;
   white-space: pre-wrap;
 }
@@ -272,12 +273,11 @@ footer .github {
 header a {
   display: inline-block;
   text-align: center;
-  width: 33%;
+  width: calc((100% - 20px) / 3);
 }
 
 header a:first-of-type {
   text-align: left;
-  width: calc((100% - 20px) / 3);
 }
 
 header a:last-of-type {
@@ -297,19 +297,27 @@ section h1 {
   border-bottom: 1px solid #ccc;
   color: #666;
   display: block;
-  font-size: 20px;
+  font-size: 19px;
   font-weight: 100;
-  margin: 0 0 50px 0;
+  margin: 0 0 25px 0;
   overflow: inherit;
-  padding: 0 0 25px 0;
+  padding: 0 0 15px 0;
   text-overflow: inherit;
   white-space: nowrap;
   width: 100%;
 }  
 
 h2 {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 400;
+  line-height: 1.5em;
+  white-space: inherit;
+}
+
+h3 {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5em;
   white-space: inherit;
 }
 
@@ -324,7 +332,9 @@ nav {
 }
 
 section {
-  margin-bottom: 15px;
+  margin: 15px auto 15px auto;
+  max-width: calc(100% - 80px);
+  padding: 20px;
 }
 
 header svg {
