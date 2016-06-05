@@ -100,8 +100,7 @@ particularly on mobile.
 
 <aside class="note">
   <p><strong>Top Tip!</strong></p>
-  <p>Make sure your server reports [the correct video MIME
-type](https://youtu.be/j5fYOYrsocs?t=3m56s).</p>
+  <p>Make sure your server reports <a href="https://youtu.be/j5fYOYrsocs?t=3m56s" title="Video showing use of correct MIME type">the correct video MIME type</a>.</p>
 </aside>
 
 ### Format support
