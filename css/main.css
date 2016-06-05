@@ -120,7 +120,7 @@ body {
 aside {
   border-left: 3px solid;
   margin: 0 0 1em 0;
-  padding: 5px 10px 5px 10px;
+  padding: 5px 5px 5px 10px;
 }
 
 blockquote {
@@ -213,7 +213,7 @@ nav {
 pre {
   background-color: #f6f6f6;
   border-radius: 3px;
-  font-family: Menlo;
+  font-family: 'Source Code Pro','Courier New', monospace;
   margin: 0 0 1em 0;
   overflow-x: scroll;
   padding: 5px 10px;
@@ -263,7 +263,7 @@ footer .github {
 
 .github a::after {
   color: #aaa;
-  content: "  â€¢  ";
+  content: "  •  ";
   margin: 0 9px;
 }
 
