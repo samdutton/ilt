@@ -51,7 +51,7 @@ What if you want to serve video to Safari users? Safari supports MP4
 video but not WebM.
 
 <aside class="note">
-  <p><strong>What's WebM?</strong></p>
+  <p><strong>What's WebM?</strong> </p>
   <p>MP4 and WebM are container formats. You can think of these a bit like
   .zip files, containing both audio and video components.</p>
   <p>Most commonly, MP4 stores audio using AAC compression and video using
@@ -99,7 +99,7 @@ request, and additional processing, which is not good anywhere,
 particularly on mobile.
 
 <aside class="note">
-  <p><strong>Top Tip!</strong></p>
+  <p><strong>Top Tip!</strong> </p>
   <p>Make sure your server reports <a href="https://youtu.be/j5fYOYrsocs?t=3m56s" title="Video showing use of correct MIME type">the correct video MIME type</a>.</p>
 </aside>
 
@@ -186,7 +186,7 @@ is that using a poster image incurs an additional file request, which
 consumes a little bit of bandwidth and requires rendering.
 
 <aside class="note">
-  <p><strong>Choose the right resolution</strong></p>
+  <p><strong>Choose the right resolution</strong> </p>
   <p>Serve video at an appropriate resolution for the target device — not too
   big, not too small. Don't just tweak the video element size! There's no
   point in serving 1080x1920 files to phones with a small viewport when

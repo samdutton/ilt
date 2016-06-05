@@ -305,7 +305,7 @@ section h1 {
   overflow: inherit;
   padding: 0 0 15px 0;
   text-overflow: inherit;
-  white-space: nowrap;
+  white-space: inherit;
   width: 100%;
 }  
 

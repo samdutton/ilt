@@ -94,7 +94,7 @@ textTrack.oncuechange = function() {
 ```
 
 <aside class="note">
-  <p><strong>Using tracks for synchronised metadata</strong></p>
+  <p><strong>Using tracks for synchronised metadata</strong> </p>
   <p>The track element can be used to synchronise any metadata with media
   playback — not just subtitles.</p>
   <p>You can add data (such as json) to cues, then parse the value of the
@@ -107,7 +107,7 @@ textTrack.oncuechange = function() {
 </aside>
 
 <aside class="warning">
-<p><strong>Tracks and tracks</strong></p>
+<p><strong>Tracks and tracks</strong> </p>
 <p>Don't confuse the track element and the <a href="http://www.html5rocks.com/en/tutorials/track/basics/#toc-cues-js" title="HTML5 Rocks article about the Track element">TextTrack API</a> with <a href="https://developer.mozilla.org/docs/Web/API/MediaStream" title="MDN documentation for MediaStream and MediaStreamTrack">MediaStreamTrack</a>:
 they are related but entirely different!</p>
 </aside>
