@@ -258,7 +258,7 @@ footer .github {
 }
 
 .github a {
-  display: inline-block; 
+  display: inline-block;
 }
 
 .github a::after {
@@ -294,7 +294,7 @@ footer {
 
 header h1 {
   display: none;
-}  
+}
 
 section h1 {
   border-bottom: 1px solid #ccc;
@@ -308,7 +308,7 @@ section h1 {
   text-overflow: inherit;
   white-space: inherit;
   width: 100%;
-}  
+}
 
 h2 {
   font-size: 17px;
@@ -327,6 +327,7 @@ h3 {
 header {
   padding: 15px 10px;
   text-align: center;
+  width: 100%;
   width: calc(100% - 20px);
 }
 
