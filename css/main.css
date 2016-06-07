@@ -276,7 +276,7 @@ header a {
 border: 1px solid red;
   display: inline-block;
   text-align: center;
-  width: 33%;
+  width: 31%;
   width: calc((100% - 20px) / 3);
 }
 
