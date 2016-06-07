@@ -328,6 +328,7 @@ header {
   padding: 15px 10px;
   text-align: center;
   width: 100%;
+  width: 300px
   width: calc(100% - 20px);
 }
 
