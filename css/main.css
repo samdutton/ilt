@@ -273,10 +273,8 @@ footer .github {
 }
 
 header a {
-  border: 1px solid red;
   display: inline-block;
   text-align: center;
-  width: 20%;
   width: calc((100% - 20px) / 3);
 }
 
@@ -287,7 +285,6 @@ header a:first-of-type {
 header a:last-of-type {
   text-align: right;
 }
-
 
 footer {
   padding: 0 0 20px 0;
