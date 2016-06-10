@@ -1,4 +1,9 @@
-## Start with a fast first load
+---
+layout: guide
+chapter: Your first Progressive Web App
+title: Start with a fast first load
+index: 4
+---
 
 Progressive Web Apps should start fast and be usable immediately. In its current
 state, our Weather App starts quickly, but it's not useable. There's no data. We
@@ -17,7 +22,7 @@ Add the following JavaScript code just inside the [immediately-invoked function
 expression](http://benalman.com/news/2010/11/immediately-invoked-function-expression/)
 in scripts/app.js (after the 'use strict'; line near the top):
 
-``` json
+``` javascript
   var initialWeatherForecast = {
     key: 'newyork',
     label: 'New York, NY',
@@ -61,13 +66,12 @@ this code lab as much as possible, we've used
 which is not ideal for production apps because it is a blocking, synchronous
 storage mechanism that is potentially very slow on some devices.
 
-```
-Extra Credit: Replace localStorage implementation with idb, check out localForage as a simple wrapper to idb.
-```{:.note}
+{:.note}
+Extra Credit: Replace `localStorage` implementation with [idb](https://www.npmjs.com/package/idb), check out [localForage](http://mozilla.github.io/localForage/) as a simple wrapper to idb.
 
 First, let's add the code required to save user preferences at the bottom of the
-immediately-invoked function expression in scripts/app.js (before the })(); line
-at the bottom of the file):
+immediately-invoked function expression in **scripts/app.js** before the `})();` line
+at the bottom of the file:
 
 ``` javascript
   // Save list of cities to localStorage.
@@ -110,14 +114,14 @@ scripts/app.js file (after the code you just added):
 ### Save the selected cities
 
 Finally, don't forget to save the list of cities when the user adds a new one by
-adding: app.saveSelectedCities(); to the butAddCity button event handler (right
-before the app.toggleAddDialog(false); line).
+adding: `app.saveSelectedCities();` to the `butAddCity` button event handler (right
+before the `app.toggleAddDialog(false);` line).
 
 ### Test it out
 
 * When first run, your app should immediately show the user the forecast from
-  initialWeatherForecast.
-* Add a new city (by clicking the + icon on the upper right) and verify that two
+  `initialWeatherForecast`.
+* Add a new city (by clicking the **+** icon on the upper right) and verify that two
   cards are shown.
 * Refresh the browser and verify that the app loads both forecasts and shows the
   latest information.

@@ -1,13 +1,17 @@
-## Implement your App Shell
+---
+layout: guide
+chapter: Your first Progressive Web App
+title: Implement your App Shell
+index: 3
+---
 
 There are multiple ways to get started with any project, and we generally
 recommend using Web Starter Kit. But, in this case, to keep our project as
 simple as possible and concentrate on Progressive Web Apps, we've provided you
 with all of the resources you'll need.
 
-```
+{:.note}
 **Learn more** about [Web Starter Kit](https://developers.google.com/web/tools/starter-kit/).
-```{:.note}
 
 ### Create the HTML for the App Shell
 
@@ -22,41 +26,41 @@ Remember, the key components will consist of:
 * A dialog for adding new cities
 * A loading indicator
 
-Your index.html file in your work directory should look something like this now
+Your **index.html** file in your work directory should look something like this now
 (this is a subset of the actual contents, don't copy this code into your file):
 
 ``` html
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;meta charset="utf-8"&gt;
-  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
-  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-  &lt;title&gt;Weather PWA&lt;/title&gt;
-  &lt;link rel="stylesheet" type="text/css" href="styles/inline.css"&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;header class="header"&gt;
-    &lt;h1 class="header\_\_title"&gt;Weather PWA&lt;/h1&gt;
-    &lt;button id="butRefresh" class="headerButton"&gt;&lt;/button&gt;
-    &lt;button id="butAdd" class="headerButton"&gt;&lt;/button&gt;
-  &lt;/header&gt;
-  &lt;main class="main"&gt;
-    &lt;div class="card cardTemplate weather-forecast" hidden&gt;
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather PWA</title>
+  <link rel="stylesheet" type="text/css" href="styles/inline.css">
+</head>
+<body>
+  <header class="header">
+    <h1 class="header\_\_title">Weather PWA</h1>
+    <button id="butRefresh" class="headerButton"></button>
+    <button id="butAdd" class="headerButton"></button>
+  </header>
+  <main class="main">
+    <div class="card cardTemplate weather-forecast" hidden>
     . . .
-    &lt;/div&gt;
-  &lt;/main&gt;
-  &lt;div class="dialog-container"&gt;
+    </div>
+  </main>
+  <div class="dialog-container">
   . . .
-  &lt;/div&gt;
-  &lt;div class="loader"&gt;
-    &lt;svg viewBox="0 0 32 32" width="32" height="32"&gt;
-      &lt;circle id="spinner" cx="16" cy="16" r="14" fill="none"&gt;&lt;/circle&gt;
-    &lt;/svg&gt;
-  &lt;/div&gt;
-  &lt;!-- Insert link to app.js here --&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+  </div>
+  <div class="loader">
+    <svg viewBox="0 0 32 32" width="32" height="32">
+      <circle id="spinner" cx="16" cy="16" r="14" fill="none"></circle>
+    </svg>
+  </div>
+  <!-- Insert link to app.js here -->
+</body>
+</html>
 ```
 
 Notice the loader is visible by default. This ensures that the user sees the
@@ -68,9 +72,8 @@ To save time, we've already created the
 you to use. Take a few minutes to review it and customize it to make it more
 your own.
 
-```
+{:.note}
 We've given you the markup and styles to save you some time and make sure you're starting on a solid foundation. In the next section, you'll have an opportunity to write your own code.
-```{:.note}
 
 ### Add the key JavaScript bootstrap code
 
@@ -90,15 +93,15 @@ In our bootstrap code (app.js), we've included:
   latest forecast data (app.updateForecasts).
 * Some fake data (fakeForecast) you can use to quickly test how things render.
 
-Add the JavaScript code
+Add the JavaScript code:
 
-1. Make a scripts folder in your work directory.
-2. Copy app.js from the resources/step4 directory to your scripts folder.
-3. In the index.html file, add a link to the newly created app.js by replacing
-   &lt;!-- Insert link to app.js here --&gt;, with:
+1. Make a **scripts** folder in your work directory.
+2. Copy **app.js** from the **resources/step4 **directory to your scripts folder.
+3. In the **index.html** file, add a link to the newly created **app.js** by replacing
+   `<!-- Insert link to app.js here -->` with:
 
-``` javascript
-&lt;script src="scripts/app.js" async&gt;&lt;/script&gt;
+``` html
+<script src="scripts/app.js" async></script>
 ```
 
 ### Test it out
@@ -108,7 +111,7 @@ app. While it may not do much yet, make sure it doesn't write errors to the
 console.
 
 To see how the fake weather data is rendered, uncomment the line below at the
-bottom of your scripts/app.js file:
+bottom of your **scripts/app.js** file:
 
 ``` javascript
 // app.updateForecastCard(fakeForecast);
@@ -121,7 +124,7 @@ spinner disabled, like this:
 
 [TRY IT](https://weather-pwa-sample.firebaseapp.com/step-04/)
 
-Once you've tried it and verified it works as expected, remove the fakeForecast
-data and the call to app.updateForecastCard(fakeForecast); . We needed it only
+Once you've tried it and verified it works as expected, remove the `fakeForecast`
+data and the call to `app.updateForecastCard(fakeForecast);`. We needed it only
 to ensure that everything worked as expected. In the next step, we'll start
 using real data.

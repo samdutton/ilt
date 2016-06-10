@@ -1,4 +1,9 @@
-## Getting set up
+---
+layout: guide
+chapter: Your first Progressive Web App
+title: Getting set up
+index: 1
+---
 
 ### Download the Code
 
@@ -30,9 +35,8 @@ the bookmarks bar:
 
 ![]()
 
-```
+{:.note}
 More help: [Add and open Chrome apps](https://support.google.com/chrome_webstore/answer/3060053)
-```{:.note}
 
 In the ensuing window, click on the Web Server icon:
 
@@ -69,7 +73,7 @@ Obviously, this app is not yet doing anything interesting - so far, it's just a
 minimal skeleton with a spinner we're using to verify your web server
 functionality. We'll add functionality and UI features in subsequent steps.
 
-```
-From this point forward, all testing/verification (e.g. the Test It Out sections in subsequent steps) should be performed using this web server setup. You'll usually be able to get away with simply refreshing your test browser tab.
-```{:.note}
+{:.note}
+From this point forward, all testing/verification (e.g. the Test It Out sections in subsequent steps) should be performed using this web server setup. You'll usually be able to get away with > simply refreshing your test browser tab.
+
 

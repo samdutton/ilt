@@ -1,4 +1,9 @@
-## Introduction
+---
+layout: guide
+chapter: Your first Progressive Web App
+title: Introduction
+index: 0
+---
 
 [Progressive Web Apps](https://developers.google.com/web/progressive-web-apps)
 are experiences that combine the best of the web and the best of apps. They are
@@ -8,7 +13,7 @@ becomes more and more powerful. It loads quickly, even on flaky networks, sends
 relevant push notifications, has an icon on the home screen, and loads as a
 top-level, full screen experience.
 
-#### What is a Progressive Web App?
+### What is a Progressive Web App?
 
 A Progressive Web Apps is:
 
@@ -35,31 +40,29 @@ This codelab will walk you through creating your own Progressive Web App,
 including the design considerations, as well as implementation details to ensure
 that your app meets the key principles of a Progressive Web App.
 
-```
-Looking for more? Watch Alex Russell's talk about  Progressive Web Apps from the 2015 Chrome Dev Summit.
-```{:.note}
+> Looking for more? Watch Alex Russell's talk about [Progressive Web Apps](https://www.youtube.com/watch?v=MyQ8mtR9WxI) from the 2015 Chrome Dev Summit.
+{:.note}
 
-#### What are we going to be building?
+### What are we going to be building?
 
-```
 In this codelab, you're going to build a Weather web app using Progressive Web App techniques. Let's consider the properties of a Progressive Web App:
-Progressive - we'll use progressive enhancement throughout.
-Responsive - we'll ensure it fits any form factor.
-Connectivity independent - we'll cache the app shell with service workers.
-App-like - we'll use app-style interactions to add cities and refresh the data.
-Fresh - we'll cache the latest data with service workers.
-Safe - we'll deploy the app to a host that support HTTPS.
-Discoverable and installable - we'll include a manifest making it easy for search engines to find our app.
-Linkable - it's the web!
-```{:.note}
 
-#### What you'll learn
+* **Progressive**: we'll use progressive enhancement throughout.
+* **Responsive**: we'll ensure it fits any form factor.
+* **Connectivity independent**: we'll cache the app shell with service workers.
+* **App-like**: we'll use app-style interactions to add cities and refresh the data.
+* **Fresh**: we'll cache the latest data with service workers.
+* **Safe**: we'll deploy the app to a host that support HTTPS.
+* **Discoverable and installable**: we'll include a manifest making it easy for search engines to find our app.
+* **Linkable**: it's the web!
+
+### What you'll learn
 
 * How to design and construct an app using the "app shell" method
 * How to make your app work offline
 * How to store data for use offline later
 
-#### What you'll need
+### What you'll need
 
 * Chrome 47 or above
 * Install [Web Server for

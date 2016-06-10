@@ -1,4 +1,9 @@
-## Use service workers to pre-cache the App Shell
+---
+layout: guide
+chapter: Your first Progressive Web App
+title: Use service workers to pre-cache the App Shell
+index: 5
+---
 
 Progressive Web Apps have to be fast, and installable, which means that they
 work online, offline, and on intermittent, slow connections. To achieve this, we
@@ -10,9 +15,8 @@ reading [Introduction To Service
 Workers](https://developers.google.com/web/fundamentals/primers/service-worker/)
 about what they can do, how their lifecycle works and more.
 
-```
+{:.note}
 **TIP:** Use a new Incognito window for testing and debugging service workers. When the Incognito window is closed, Chrome will remove any cached data or installed service worker, ensuring that you always start from a clean state.
-```{:.note}
 
 Features provided via service workers should be considered a progressive
 enhancement, and added only if supported by the browser. For example, with
@@ -22,9 +26,8 @@ the offline code isn't called, and the user gets a basic experience. Using
 feature detection to provide progressive enhancement has little overhead and it
 won't break in older browsers that don't support that feature.
 
-```
+{:.note}
 **Remember:** Service worker functionality is only available on pages that are accessed via HTTPS (https://localhost and equivalents will also work, to facilitate testing). To learn about the rationale behind this restriction check out Prefer Secure Origins For Powerful New Features from the Chromium team.
-```{:.note}
 
 ### Register the service worker if it's available
 
@@ -38,8 +41,8 @@ This takes two simple steps:
 1. Create a JavaScript file containing the service worker
 
 First, we need to check if the browser supports service workers, and if it does,
-register the service worker. Add the following code to the scripts/app.js file
-(before the })(); line at the bottom of the file):
+register the service worker. Add the following code to the **scripts/app.js** file
+before the `})();` line at the bottom of the file:
 
 ``` javascript
   if ('serviceWorker' in navigator) {
@@ -55,17 +58,16 @@ When the service worker is registered, an install event is triggered the first
 time the user visits the page. In this event handler, we will cache all the
 assets that are needed for the application.
 
-```
+{:.warning}
 The code below must NOT be used in production, it covers only the most basic use cases and it's easy to get yourself into a state where your app shell will never update. Be sure to review the section below that discusses the pitfalls of this implementation and how to avoid them.
-```{:.warning}
 
 When the service worker is fired, it should open the
-[caches](https://developer.mozilla.org/en-US/docs/Web/API/Cache) object and
+[`caches`](https://developer.mozilla.org/en-US/docs/Web/API/Cache) object and
 populate it with the assets necessary to load the App Shell. Create a file
-called service-worker.js in your application root folder (which should be
-your-first-pwapp-master/work). This file must live in the application root
+called **service-worker.js** in your application root folder (which should be
+**your-first-pwapp-master/work**). This file must live in the application root
 because the scope for service workers is defined by the directory in which the
-file resides. Add this code to your new service-worker.js file:
+file resides. Add this code to your new **service-worker.js** file:
 
 ``` javascript
 var cacheName = 'weatherPWA-step-6-1';
@@ -85,21 +87,21 @@ First, we need to open the cache with caches.open() and provide a cache name.
 Providing a cache name allows us to version files, or separate data from the app
 shell so that we can easily update one but not affect the other.
 
-Once the cache is open, we can then call cache.addAll(), which takes a list of
+Once the cache is open, we can then call `cache.addAll()`, which takes a list of
 URLs, then fetches them from the server and adds the response to the cache.
-Unfortunately, cache.addAll() is atomic, if any of the files fail, the entire
+Unfortunately, `cache.addAll()` is atomic, if any of the files fail, the entire
 cache step will also fail!
 
-```
+{:.note}
 Sanity Check: You can make sure your service worker has been registered properly and that the install and activate events are being fired by reloading the page and checking the Console in the DevTools.
-```{:.note}
 
-**Be sure to change the ****cacheName**** variable each time you make changes to
+
+**Be sure to change the `cacheName` variable each time you make changes to
 your service worker** to ensure you're always getting the latest version of the
 files from the cache. It's important to periodically purge the cache of unused
-content and data. Add an event listener to the activate event that gets all of
+content and data. Add an event listener to the `activate` event that gets all of
 the cache keys and deletes the unused ones by adding the following code to the
-bottom of your service-worker.js file:
+bottom of your **service-worker.js** file:
 
 ``` javascript
 self.addEventListener('activate', function(e) {
@@ -144,9 +146,8 @@ var filesToCache = [
 ];
 ```
 
-```
+{:.note}
 Be sure to include all permutations of file names, for example our app is served from index.html, but it may also be requested as / since the server sends index.html when a root folder is requested. You could deal with this in the fetch method, but it would require special casing which may become complex.
-```{:.note}
 
 Our app doesn't work offline quite yet. We've cached the app shell components,
 but we still need to load them from the local cache.
@@ -167,7 +168,7 @@ self.addEventListener('fetch', function(event) {
 ```
 
 Let's now serve the app shell from the cache. Add the following code to the
-bottom of your service-worker.js file:
+bottom of your **service-worker.js** file:
 
 ``` javascript
 self.addEventListener('fetch', function(e) {
@@ -182,10 +183,10 @@ self.addEventListener('fetch', function(e) {
 
 Stepping from inside, out, `caches.match()` evaluates the web request that
 triggered the
-[fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) event, and
+[`fetch`](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) event, and
 checks to see if it's available in the cache. It then either responds with the
-cached version, or uses fetch to get a copy from the network. The response is
-passed back to the web page with e.respondWith().
+cached version, or uses `fetch` to get a copy from the network. The `response` is
+passed back to the web page with `e.respondWith()`.
 
 ```
 If you're not seeing the [ServiceWorker] logging in the console, be sure you've changed the cacheName variable and reload the page. If that doesn't work, see the section on Tips for testing live service workers.
@@ -268,7 +269,7 @@ service worker, giving you access to the console of the service worker.
 ### Test it out
 
 * Open the Chrome DevTools or open a new tab and check
-  chrome://serviceworker-internals to make sure the service worker is properly
+  **chrome://serviceworker-internals** to make sure the service worker is properly
   registered and the right resources are cached.
 * Try changing the cacheName and make sure that the cache is properly updated.
 

@@ -61,8 +61,10 @@ footer .github {
 
 .note {
   background-color: #ded;
-  border-color: #6a6;
+  border-left: 3px solid #6a6;
   color: #464;
+  margin: 0 0 1em 0;
+  padding: 5px 5px 5px 10px;
 }
 
 .title {
@@ -75,8 +77,10 @@ footer .github {
 
 .warning {
   background-color: #fed;
-  border-color: #db8a61;
   color: #842;
+  border-left: 3px solid #db8a61;
+  margin: 0 0 1em 0;
+  padding: 5px 5px 5px 10px;
 }
 
 a {
@@ -237,8 +241,8 @@ nav span {
   vertical-align: middle;
 }
 
-@media screen and (max-width: 500px),
-  screen and (max-height: 500px) {
+@media screen and (max-width: 600px),
+  screen and (max-height: 600px) {
 
   .container {
     float: inherit;

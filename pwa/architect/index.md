@@ -1,4 +1,9 @@
-## Architect your App Shell
+---
+layout: guide
+chapter: Your first Progressive Web App
+title: Architect your App Shell
+index: 2
+---
 
 ### What is the app shell?
 
