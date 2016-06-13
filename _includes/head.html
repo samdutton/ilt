@@ -43,6 +43,9 @@
   <link rel="manifest" href="manifest.json">
   <link rel="shortcut icon" href="{{site.baseurl}}/images/icons/icon72.png">
   <link rel="stylesheet" href="{{ site.baseurl }}/css/syntax.css">
-  <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
-
+  {% assign css = site.baseurl | append:"/css/main.css" %}
+  {% if include.css %}
+    {% assign css = include.css %}
+  {% endif %}
+  <link rel="stylesheet" href="{{css}}">
 </head>

@@ -3,6 +3,7 @@ layout: guide
 chapter: Your first Progressive Web App
 title: Introduction
 index: 0
+redirect_from: /pwa/
 ---
 
 [Progressive Web Apps](https://developers.google.com/web/progressive-web-apps)
