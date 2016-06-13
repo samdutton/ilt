@@ -4,8 +4,8 @@ description: >
 email: samdutton@gmail.com
 gems:
   - jekyll-sitemap
+  - jekyll-redirect-from
 github_username:  samdutton
-markdown: kramdown
 title: ILT
 twitter_username: sw12
 url: "https://github.com/samdutton/ilt"

@@ -3,11 +3,11 @@
 
 <nav>
 
-  <div class="links">{% for p in pages %}{% if p.title %}
+  <div class="links">{% for p in pages %}<!-- {% if p.title %} -->
       <a href="{{ p.url | prepend: site.baseurl }}"{% if p.title == page.title %} class="current"{% endif %}>
         <span class="index">{{p.index | plus:1}}</span>
         <span class="title">{{p.title}}</span>
-      </a>{% endif %}{% endfor %}
+      </a><!-- {% endif %} -->{% endfor %}
   </div>
 
   {% include github.html %}

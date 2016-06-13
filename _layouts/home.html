@@ -5,14 +5,26 @@
 
 <body>
 
-{% include header.html %}
+{% assign pages = site.pages | sort:"chapter"  %}
+<!-- {% assign pages = pages | where:"chapter", page.chapter  %}
+ -->
 
-<div class="container">
+{% for p in pages %}
+{% endfor %}
 
-{{ content }}
-</div> <!-- container -->
+<!-- <nav>
 
-{% include footer.html %}
+  <div class="links">{% for p in pages %}{% if p.title %}
+      <a href="{{ p.url | prepend: site.baseurl }}"{% if p.title == page.title %} class="current"{% endif %}>
+        <span class="index">{{p.index | plus:1}}</span>
+        <span class="title">{{p.title}}</span>
+      </a>{% endif %}{% endfor %}
+  </div>
+
+  {% include github.html %}
+
+</nav> -->
+
 
 </body>
 
