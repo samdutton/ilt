@@ -1,7 +1,8 @@
 {% assign pages = site.pages | sort:"index"  %}
 {% assign pages = pages | where:"chapter", page.chapter  %}
 
-<nav>
+<!-- semantic elements not supported by IE lt 9 -->
+<div class="nav">
 
   <div class="links">{% for p in pages %}<!-- {% if p.title %} -->
       <a href="{{ p.url | prepend: site.baseurl }}"{% if p.title == page.title %} class="current"{% endif %}>
@@ -12,5 +13,5 @@
 
   {% include github.html %}
 
-</nav>
+</div>
 

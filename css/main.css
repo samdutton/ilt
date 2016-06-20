@@ -59,6 +59,17 @@ footer .github {
   border-color: #2196f3;
 }
 
+.nav {
+  background-color: #f5f5f5;
+  box-shadow: 1px 1px 16px #ccc;
+  float: left;
+  height: 100%;
+  padding: 10px 15px 30px 15px;
+  position: fixed;
+  top: 0;
+  width: 226px;
+}
+
 .note {
   background-color: #ded;
   border-left: 3px solid #6a6;
@@ -111,7 +122,7 @@ header a {
   width: 36px;
 }
 
-nav a:hover {
+.nav a:hover {
 }
 
 body {
@@ -203,17 +214,6 @@ html {
     padding: 0;
 }
 
-nav {
-  background-color: #f5f5f5;
-  box-shadow: 1px 1px 16px #ccc;
-  float: left;
-  height: 100%;
-  padding: 10px 15px 30px 15px;
-  position: fixed;
-  top: 0;
-  width: 226px;
-}
-
 pre {
   background-color: #f6f6f6;
   border-radius: 3px;
@@ -235,7 +235,7 @@ section {
 }
 
 
-nav span {
+.nav span {
   display: inline-block;
   line-height: 24px;
   vertical-align: middle;
@@ -332,7 +332,7 @@ nav span {
     width: calc(100% - 20px);
   }
 
-  nav {
+  .nav {
     display: none;
   }
 
