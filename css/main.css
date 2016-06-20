@@ -37,10 +37,14 @@ footer .github {
 }
 
 .header {
-  padding: 15px 10px;
-  text-align: center;
-  width: 100%;
-  width: calc(100% - 20px);
+  background-color: #1e88e5;
+  box-shadow: 1px 1px 16px #ccc;
+  line-height: 23px;
+  padding: 22px 20px 20px 25px;
+  position: fixed;
+  vertical-align: middle;
+  width: calc(100% - 256px);
+  top: 0;
 }
 
 .home-arrow {
@@ -214,17 +218,6 @@ h3 {
   white-space: nowrap;
 }
 
-.header {
-  background-color: #1e88e5;
-  box-shadow: 1px 1px 16px #ccc;
-  line-height: 23px;
-  padding: 22px 20px 20px 25px;
-  position: fixed;
-  vertical-align: middle;
-  width: calc(100% - 256px);
-  top: 0;
-}
-
 html {
     height: 100%;
     margin: 0;
@@ -261,6 +254,13 @@ pre {
     display: block;
     position: inherit;
     width: 100%;
+  }
+
+  .header {
+    padding: 15px 10px;
+    text-align: center;
+    width: 100%;
+    width: calc(100% - 20px);
   }
 
   .github a {
