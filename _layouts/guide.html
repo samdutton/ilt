@@ -11,14 +11,15 @@
 
 {% include header.html %}
 
-<section>
+<!-- semantic elements not supported by IE lt 9 -->
+<div class="section">
 
 <h1>{{page.chapter}}</h1>
 
 <h2>{{page.index | plus:1}}. {{page.title}}</h2>
 
 {{content}}
-</section>
+</div>
 
 </div> <!-- container -->
 
