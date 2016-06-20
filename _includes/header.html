@@ -13,7 +13,8 @@
   {% assign next-url = pages[next-index].url | prepend:site.baseurl %}
 {% endif %}
 
-<header>
+<!-- semantic elements are not supported by IE < 9 -->
+<div class="header">
 
   <a href="{{previous-url}}" title="{{previous-title}}">
   {% if previous-url  %}
@@ -43,4 +44,4 @@
   <!-- No h1 in header for smaller viewports -->
   <h1>{{page.chapter}}</h1>
 
-</header>
+</div>

@@ -36,6 +36,13 @@ footer .github {
   display: none;
 }
 
+.header {
+  padding: 15px 10px;
+  text-align: center;
+  width: 100%;
+  width: calc(100% - 20px);
+}
+
 .home-arrow {
   display: block;
   float: left;
@@ -117,7 +124,7 @@ a {
   text-decoration: none;
 }
 
-header a {
+.header a {
   display: inline-block;
   width: 36px;
 }
@@ -197,7 +204,7 @@ h3 {
   white-space: nowrap;
 }
 
-header {
+.header {
   background-color: #1e88e5;
   box-shadow: 1px 1px 16px #ccc;
   line-height: 23px;
@@ -272,18 +279,18 @@ section {
     margin: 0;
   }
 
-  header a {
+  .header a {
     display: inline-block;
     text-align: center;
     width: 28%;
     width: calc((100% - 20px) / 3);
   }
 
-  header a:first-of-type {
+  .header a:first-of-type {
     text-align: left;
   }
 
-  header a:last-of-type {
+  .header a:last-of-type {
     text-align: right;
   }
 
@@ -292,7 +299,7 @@ section {
     text-align: center;
   }
 
-  header h1 {
+  .header h1 {
     display: none;
   }
 
@@ -325,13 +332,6 @@ section {
     white-space: inherit;
   }
 
-  header {
-    padding: 15px 10px;
-    text-align: center;
-    width: 100%;
-    width: calc(100% - 20px);
-  }
-
   .nav {
     display: none;
   }
@@ -342,7 +342,7 @@ section {
     padding: 20px;
   }
 
-  header svg {
+  .header svg {
     vertical-align: middle;
   }
 
