@@ -10,6 +10,8 @@ layout: home
 {% endif %}{% endfor %}
 </div>
 
+Code for this site is available from [github.com/samdutton/ilt](https://github.com/samdutton/ilt).
+
 <!--
 {% assign pages = site.pages | sort:"chapter" %}
 {% assign chapter = pages.first.chapter %}
